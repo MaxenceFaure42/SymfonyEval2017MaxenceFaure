@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block body %}
+
+
+    <a href="{{ url('courses') }}" class="btn btn-info"> <img src = "https://www.provelis.com/wp-content/uploads/2015/05/Picto-maison-bleue1.png" width="30" height="30"/></a> </td>
+
+
+<h1>Welcome !</h1>
+    <h2>Catégories : </h2>
+    <table>
+        {% for value in results %}
+            <tr>
+                <td>  <a href="{{ url('postes', {id:value.id}) }}" class="btn btn-info">{{ value.name }}</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
